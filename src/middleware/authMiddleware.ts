@@ -38,4 +38,3 @@ export const ProtectedRoute: React.FC<AuthMiddlewareProps> = ({ children }) => {
 
   return isAuthorized ? <>{children}</> : null;
 };
-
