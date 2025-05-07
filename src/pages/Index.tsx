@@ -126,10 +126,10 @@ const Index: React.FC = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                 <ul className="space-y-2 text-gray-400">
-                  <li>123 Land Avenue</li>
-                  <li>Property City, PC 12345</li>
-                  <li>Email: info@kangangu.com</li>
-                  <li>Phone: (123) 456-7890</li>
+                  <li>0720861867</li>
+                  <li>Central, i.e KIAMBU, NAIROBI COUNTY</li>
+                  <li>Email: info@kanganguinvestment.com</li>
+                  <li>Phone: +254 720 861867</li>
                 </ul>
               </div>
             </div>
