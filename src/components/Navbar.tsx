@@ -1,8 +1,24 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { isAuthenticated, logout } from '@/middleware/authMiddleware';
+import { Button } from '@/components/ui/button';
+import { LogOut } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+  const authenticated = isAuthenticated();
+  
+  const handleLogout = () => {
+    logout();
+    toast({
+      title: "Logged out",
+      description: "You have been successfully logged out",
+    });
+    navigate('/');
+  };
+
   return (
     <nav className="bg-white shadow-md py-4">
       <div className="container-custom flex items-center justify-between">
@@ -18,12 +34,32 @@ const Navbar: React.FC = () => {
           >
             Home
           </Link>
-          <Link 
-            to="/admin" 
-            className="font-medium text-gray-700 hover:text-kangangu transition-colors"
-          >
-            Admin
-          </Link>
+          {authenticated ? (
+            <>
+              <Link 
+                to="/admin" 
+                className="font-medium text-gray-700 hover:text-kangangu transition-colors"
+              >
+                Admin
+              </Link>
+              <Button 
+                variant="ghost"
+                size="sm"
+                onClick={handleLogout}
+                className="flex items-center gap-1"
+              >
+                <LogOut size={16} />
+                Logout
+              </Button>
+            </>
+          ) : (
+            <Link 
+              to="/login" 
+              className="font-medium text-gray-700 hover:text-kangangu transition-colors"
+            >
+              Login
+            </Link>
+          )}
           <Link 
             to="/" 
             className="btn-primary"
