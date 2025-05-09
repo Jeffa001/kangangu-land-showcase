@@ -25,7 +25,7 @@ const AdminLandItem: React.FC<AdminLandItemProps> = ({ land }) => {
 
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'KES',
     maximumFractionDigits: 0
   }).format(price);
 

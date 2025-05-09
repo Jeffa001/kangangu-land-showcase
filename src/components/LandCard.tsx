@@ -11,7 +11,7 @@ const LandCard: React.FC<LandCardProps> = ({ land }) => {
   const { id, title, price, location, images, squareMeters } = land;
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'KES',
     maximumFractionDigits: 0
   }).format(price);
 

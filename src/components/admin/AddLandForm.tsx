@@ -144,7 +144,7 @@ const AddLandForm: React.FC<AddLandFormProps> = ({ onAddLand }) => {
         </div>
         
         <div className="space-y-2">
-          <Label htmlFor="price">Price (USD)</Label>
+          <Label htmlFor="price">Price (KES)</Label>
           <Input
             id="price"
             name="price"
