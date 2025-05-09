@@ -79,9 +79,9 @@ const Index: React.FC = () => {
                 className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-kangangu"
               >
                 <option value="all">All Prices</option>
-                <option value="low">$200,000 & Under</option>
-                <option value="medium">$200,001 - $350,000</option>
-                <option value="high">$350,001 & Above</option>
+                <option value="low">Ksh200,000 & Under</option>
+                <option value="medium">Ksh200,001 - Ksh350,000</option>
+                <option value="high">Ksh350,001 & Above</option>
               </select>
             </div>
           </div>
