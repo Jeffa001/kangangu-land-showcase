@@ -4,7 +4,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useLandContext } from '@/context/LandContext';
 import Navbar from '@/components/Navbar';
 import ImageGallery from '@/components/ImageGallery';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Phone, PhoneCall } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const LandDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,6 +27,8 @@ const LandDetail: React.FC = () => {
     currency: 'KES',
     maximumFractionDigits: 0
   }).format(land.price);
+
+  const phoneNumber = "+254720861867";
   
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -89,9 +92,13 @@ const LandDetail: React.FC = () => {
               </div>
               
               <div className="mt-8 space-y-4">
-                <button className="btn-primary w-full py-3">
-                  Contact Agent
-                </button>
+                <a 
+                  href={`tel:${phoneNumber}`} 
+                  className="btn-primary w-full py-3 flex items-center justify-center gap-2"
+                >
+                  <PhoneCall size={20} />
+                  Contact Agent: {phoneNumber}
+                </a>
                 <button className="btn-secondary w-full py-3">
                   Schedule Viewing
                 </button>
