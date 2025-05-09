@@ -23,7 +23,7 @@ const LandDetail: React.FC = () => {
   
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'KSH',
     maximumFractionDigits: 0
   }).format(land.price);
   
