@@ -6,7 +6,7 @@ interface AuthMiddlewareProps {
   children: React.ReactNode;
 }
 
-const ADMIN_PASSWORD = "1234";
+const ADMIN_PASSWORD = "4545";
 
 export const isAuthenticated = (): boolean => {
   return localStorage.getItem("auth_token") === ADMIN_PASSWORD;
